@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loteria</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagenes_optimizadas/imagenes/favicon_uady.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="custom.css">
+
+</head>
+<body>
+    <div class="container ContenedorTitulo">
+        
+            <div class="flex"><p class="titulo">Ko’one’ex báaxtik le Loteríao’</p></div>
+            <div class="flex"><p class="subtitulo">(Vamos a jugar la Lotería)</p></div>
+                
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                 <!-- Cartas impresas dinamicamente -->
+            </div>
+            <div class="boton"><button type="button" id="reproducir">Pronunciación</button></div>
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            loop: true,
+            grabCursor: true,
+            on: {
+                slideChange: function() {
+                    var activeSlide = this.slides[this.activeIndex];   
+                }
+            }
+        });
+
+        var btnSonido = document.getElementById("reproducir");
+        btnSonido.addEventListener('click', function() {
+            activeSlide = swiper.slides[swiper.activeIndex];
+            var audio = activeSlide.querySelector("audio");
+            audio.play();
+        });
+    </script>
+    
+</body>
+</html>
+
+
+
+
