@@ -32,13 +32,18 @@
             </div>
             
 
+            <div class="boton">
+                <button type="button" id="reproducir">Pronunciación</button>
+                <button type="button" id="shuffleButton">Mezclar cartas</button>
+            </div>
 
-            <div class="boton"><button type="button" id="reproducir">Pronunciación</button></div>
+
         </div>
     </div>
     
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper-extended/dist/swiper-extended.min.js"></script>
     <script src="script.js"></script>
 
     
@@ -61,6 +66,29 @@
             var audio = activeSlide.querySelector("audio");
             audio.play();
         });
+
+       
+        function shuffleCards() {
+          var swiperInstance = swiper;
+
+          for (var i = swiperInstance.slides.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            swiperInstance.slides[i].parentNode.insertBefore(swiperInstance.slides[j], swiperInstance.slides[i]);
+          }
+
+          swiperInstance.update();
+        }
+
+
+        // Obtener una referencia al botón
+        var shuffleButton = document.getElementById('shuffleButton');
+
+        shuffleButton.addEventListener('click', function() {
+          shuffleCards();
+        });
+
+
+
     </script>
     
 </body>

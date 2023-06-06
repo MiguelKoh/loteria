@@ -25,3 +25,4 @@ const imprimirCartas = async () => {
 }
 
 document.addEventListener("DOMContentLoaded", imprimirCartas);
+
