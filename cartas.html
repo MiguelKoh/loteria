@@ -8,18 +8,31 @@
     <link rel="shortcut icon" type="image/x-icon" href="imagenes_optimizadas/imagenes/favicon_uady.ico">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
-    <div class="container ContenedorTitulo">
+    <div class="container-fluid">
         
-            <div class="flex"><p class="titulo">Ko’one’ex báaxtik le Loteríao’</p></div>
-            <div class="flex"><p class="subtitulo">(Vamos a jugar la Lotería)</p></div>
-                
+        <div class="row mt-3">   
+            <div class="col-12 d-flex justify-content-center">
+              <p class="titulo">Ko’one’ex báaxtik le Loteríao’</p>
+           </div>
+
+           <div class="col-12 d-flex justify-content-center">
+              <p class="subtitulo">(Vamos a jugar la Lotería)</p>
+           </div> 
+        </div>
+
+
+
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                  <!-- Cartas impresas dinamicamente -->
             </div>
+            
+
+
             <div class="boton"><button type="button" id="reproducir">Pronunciación</button></div>
         </div>
     </div>
@@ -44,6 +57,7 @@
         var btnSonido = document.getElementById("reproducir");
         btnSonido.addEventListener('click', function() {
             activeSlide = swiper.slides[swiper.activeIndex];
+            console.log(activeSlide);
             var audio = activeSlide.querySelector("audio");
             audio.play();
         });

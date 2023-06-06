@@ -11,6 +11,9 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin:0;
+    background-image:url("imagenes_optimizadas/imagenes/mesa_poker_r.jpg");
 }
 
 .container{
@@ -20,10 +23,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image:url("imagenes_optimizadas/imagenes/mesa_poker_r.jpg");
-    background-repeat: repeat-y;
 
 }
+
 
 .swiper{
     width: 300px;
@@ -44,6 +46,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    margin-bottom:25px ;
 }
 
 #reproducir{
@@ -67,21 +70,33 @@ font-weight: 400;
 
 .titulo{
    font-family: 'Annie Use Your Telescope', cursive;
-   font-size: 50px;
+   font-size: 45px;
    color: #ffffff;
 }
+
+@media (max-width: 767.98px) { 
+
+.titulo{ 
+ font-size: 40px;
+
+}
+
+ }
+
+
 
 .subtitulo{
    font-family: 'Annie Use Your Telescope', cursive;
-   font-size: 40px;
+   font-size: 35px;
    color: #ffffff;
 }
 
 
-.ContenedorTitulo{
+.contenedorTitulo{
     display: flex;
     flex-direction: column;
 }
+
 .flex{
     display: flex;
     justify-content: center;
