@@ -13,17 +13,13 @@
 </head>
 <body>
     <div class="container-fluid">
-    
         <div class="row mt-3">
-            
             <div class="col-12 d-flex justify-content-center">
                 <p class="titulo mb-0">Ko’one’ex báaxtik le Loteríao’</p>
             </div>
-    
             <div class="col-12 d-flex justify-content-center">
                 <p class="subtitulo">(Vamos a jugar la Lotería)</p>
             </div>
-
         </div>
         
         <div class="row">
@@ -74,19 +70,17 @@
 
        
         function shuffleCards() {
-          var swiperInstance = swiper;
 
-          for (var i = swiperInstance.slides.length - 1; i > 0; i--) {
+          for (var i = swiper.slides.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
-            swiperInstance.slides[i].parentNode.insertBefore(swiperInstance.slides[j], swiperInstance.slides[i]);
+            swiper.slides[i].parentNode.insertBefore(swiper.slides[j], swiper.slides[i]);
           }
 
-          swiperInstance.update();
+          swiper.update();
         }
 
 
-        // Obtener una referencia al botón
-        var shuffleButton = document.getElementById('shuffleButton');
+        const shuffleButton = document.getElementById('shuffleButton');
 
         shuffleButton.addEventListener('click', function() {
           shuffleCards();
