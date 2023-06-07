@@ -28,6 +28,7 @@ while ($filaCarta = mysqli_fetch_array($result)) {
 $jsonString = json_encode($json);
 echo $jsonString;
 
+DesconectaBD($cn);
 
 
 ?>
