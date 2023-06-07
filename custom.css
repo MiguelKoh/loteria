@@ -32,6 +32,24 @@ body{
     height: auto;
 }
 
+@media (max-width: 767.98px) { 
+
+.swiper {
+    width: 250px;
+    height: auto;
+  }
+}
+
+@media (min-width: 991.98px) {
+
+.w-30{
+    width: 30%;
+}
+
+
+
+ }
+
 .swiper-slide{
     border-radius: 18px;
     background: #fff;
@@ -71,16 +89,26 @@ font-weight: 400;
 
 .titulo{
    font-family: 'Annie Use Your Telescope', cursive;
-   font-size: 45px;
+   font-size: 60px;
    color: #ffffff;
 }
 
 @media (max-width: 767.98px) { 
 
 .titulo{ 
- font-size: 40px;
+ font-size: 35px;
 
 }
+.subtitulo{
+font-size: 30px!important;
+}
+ 
+.btn-carta{
+    width: 75%;
+}
+
+
+
 
  }
 
@@ -88,7 +116,7 @@ font-weight: 400;
 
 .subtitulo{
    font-family: 'Annie Use Your Telescope', cursive;
-   font-size: 35px;
+   font-size: 40px;
    color: #ffffff;
 }
 
@@ -120,3 +148,28 @@ margin-left: 5px;
 
 }
 
+
+
+.btn-container1{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.btn-container2{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+
+@media (max-width: 767.98px) {
+   .btn-container1{
+    justify-content: center;
+   }
+
+   .btn-container2{
+    justify-content: center;
+    margin-top: 0.2rem;
+   } 
+}
