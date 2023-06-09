@@ -1,12 +1,15 @@
+function getHost() {
+  return window.location.hostname;
+}
+
 
 const imprimirCartas = async () => {
   
   try {
-  
+    const hostname = getHost();
     const wrapper = document.querySelector(".swiper-wrapper");
-    const respuestaCartas = await fetch("http://localhost/loteria/obtenerCarta.php");
+    const respuestaCartas = await fetch(`http://${hostname}/loteria/obtenerCarta.php`);
     const cartas = await respuestaCartas.json();
-    //console.log(cartas);
     let card = '';
   
    cartas.forEach(carta => {
